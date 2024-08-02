@@ -1,0 +1,34 @@
+
+
+.nave-bar{
+    list-style: none;
+    width: 60px;
+    height: 89.4vh;
+    margin: 0;
+    padding: 8px 0 0 0;
+    position: sticky;
+    top:4px;
+    background-color: var(--lightBlack);
+    li{
+        width:100% ;
+        padding:4px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 22px;
+        color: var(--white);
+        cursor: pointer;
+        border-left: 3px solid transparent;
+        &:hover{
+            border-left: 3px solid var(--waterBlue);
+            color: var(--waterBlue);
+           
+        }
+    }
+    .active{
+        border-left: 3px solid var(--waterBlue);
+        color: var(--waterBlue);
+
+    }
+}

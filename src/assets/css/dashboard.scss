@@ -1,0 +1,75 @@
+.main-light-dashboard{
+
+}
+.dash-first-pi-head{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    padding: 30px 0;
+    .count-show-frame{
+        display: flex;
+        gap: 16px;
+        width: 100%;
+        .count-card{
+            max-width: 171px;
+            width: 100%;
+            padding: 13px;
+            border-radius: 8px;
+            background-color: var(--lightBlack);
+            .item-image-icon{
+                width: 34px;
+                height: 34px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                background-color: var(--smiDarkBlue);
+                color: var(--waterBlue);
+                margin-bottom: 8px;
+            }
+            .show-count-box{
+                display: flex;
+                align-items: end;
+                justify-content: space-between;
+                padding-top: 16px;
+                h3{
+
+                }
+                p{
+                    color:rgb(39, 195, 39);
+                }
+            }
+          &:nth-child(2){
+            .item-image-icon{
+                background-color:rgba(39, 195, 39,.3) ;
+                color:rgb(39, 195, 39);
+            }
+          
+          }
+          &:nth-child(3){
+            .item-image-icon{
+                background-color:rgba(181, 106, 77, 0.3) ;
+                color:rgb(195, 91, 39);
+            }
+            .show-count-box{
+                p{
+                    color:rgb(195, 91, 39);
+                }
+            }
+          }
+          &:last-child{
+            .item-image-icon{
+                background-color:rgba(181, 77, 155, 0.3) ;
+                color:rgb(181, 77, 155);
+            }
+            .show-count-box{
+                p{
+                    color:rgb(181, 77, 155);
+                }
+            }
+          }
+        }
+
+
+    }
+}
