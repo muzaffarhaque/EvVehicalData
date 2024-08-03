@@ -5,34 +5,11 @@ const PaiChart = (props) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
-        // console.log(props)
-    // const data = {
-    //   labels: ["Consignment booked", "In Transit", "Out for delivery", "Delivered Successfully"],
-    //   datasets: [{
-    //     data: [30, 50, 20,40],
-    //     backgroundColor: ["#1B76AB", "#218FCF", "#28AFFD" ,'#1FCF9D'],
-    //     hoverBackgroundColor: ["#1B76AB", "#218FCF", "#28AFFD",'#1FCF9D'],
-    //     borderColor: "white", 
-    //     borderWidth: 9,
-    //     hoverBorderWidth:0,
-    //     borderRadius:13
-    //   }]
-    // };
+  
     const data = {
       labels: ["Consignment booked", "In Transit", "Out for delivery", "Delivered Successfully", "Within Time Limit", "Out of Time Limit"],
       datasets: [
-        // First dataset for the inner doughnut
-        // {
-        //   data: [100, 100, 100, 100, 100, 100], // Placeholder data
-        //   backgroundColor: ["#FFF", "#FFF", "#FFF", "#FFF", "#1B76AB", "#FF6384"],
-        //   borderColor: ["#FFF", "#FFF", "#FFF", "#FFF", "#1B76AB", "#FF6384"],
-        //   borderWidth: [0, 0, 0, 0, 20, 20], // Increase borderWidth for the last two segments to create the arc effect
-        //   borderColor: "white", 
-        //   borderWidth: 2,
-        //   hoverBorderWidth:0,
-        //   borderRadius:15,
-        //   cutout: '50%',
-        // },
+   
         {
           data: [30, 70,],
           backgroundColor: ["#99CBE8", "#28AFFD"],
@@ -59,7 +36,6 @@ const PaiChart = (props) => {
         responsive: true,
         maintainAspectRatio: false, 
         plugins:{
-       
           legend:{
             display:false,
             position:'right',
@@ -83,29 +59,6 @@ const PaiChart = (props) => {
             },
            
           },
-          // tooltip: {
-          //   enabled: false,
-          //   callbacks: {
-          //     // todo:-This label color call backFunction change toltip color box
-          //     labelColor: function(context) {
-                
-          //         return {
-          //             borderColor: 'rgba(0, 0, 255,0)',
-          //             backgroundColor: context?.dataset?.backgroundColor[context?.dataIndex],
-          //             borderWidth: 2,
-          //             borderDash: [2, 2],
-          //             borderRadius: 2,
-          //         };
-          //     },
-          //     labelTextColor: function(context) {
-          //         return '#543453';
-          //     }
-          // },
-          //   backgroundColor: '#FFF',
-          //   titleColor: '#ab2525',
-          //   displayColors: true, 
-
-          // },
         },
        
       },
