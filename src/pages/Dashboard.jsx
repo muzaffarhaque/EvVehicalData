@@ -1,5 +1,6 @@
 import React from "react";
 import { FaShoppingBasket } from "react-icons/fa";
+import PaiChart from "../components/chart/PaiChart";
 export default function Dashboard() {
   return (
     <div className="main-light-dashboard">
@@ -20,6 +21,16 @@ export default function Dashboard() {
               </div>
             );
           })}
+        </div>
+        <div className="pie-chart-frame">
+          <div className="content-frame">
+            <p className="fs-14-12 white mb-0">Net Profit</p>
+            <h3 className="fs-34-28 fw-semibold white mb-0">$ 7678645.09</h3>
+            <p className="fs-14-12 fw-bold mb-1 text-start green-active">3%</p>
+          </div>
+          <div className="pie-chart-box">
+            <PaiChart/>
+          </div>
         </div>
       </div>
     </div>
