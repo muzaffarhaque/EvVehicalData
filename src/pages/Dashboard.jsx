@@ -1,15 +1,17 @@
 import React from "react";
 import { FaShoppingBasket } from "react-icons/fa";
 import PaiChart from "../components/chart/PaiChart";
-import { Dropdown } from "react-bootstrap";
+import { Dropdown, Image } from "react-bootstrap";
 import BarChart from "../components/chart/BarChart";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { MdGpsFixed } from "react-icons/md";
+
+import userImage from "../assets/images/user3.avif";
 export default function Dashboard() {
   return (
     <div className="main-light-dashboard">
       <h2 className="fs-28-18 fw-bold white">Dashboard</h2>
-      <div className="dash-first-pi-head">
+      <div className="dash-first-pi-head haque">
         <div className="count-show-frame justify-content-between">
           {[1, 2, 3, 4].map((ele, i) => {
             return (
@@ -43,9 +45,7 @@ export default function Dashboard() {
             <h2 className="fs-24-16 fw-bold white">Activity</h2>
 
             <Dropdown className="custom-dropdown">
-              <Dropdown.Toggle  id="dropdown-basic">
-                Weekly
-              </Dropdown.Toggle>
+              <Dropdown.Toggle id="dropdown-basic">Weekly</Dropdown.Toggle>
 
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
@@ -55,16 +55,91 @@ export default function Dashboard() {
             </Dropdown>
           </div>
           <div className="bar-chart-wrapper ">
-            <BarChart/>
+            <BarChart />
           </div>
         </div>
         <div className="pie-chart-frames ">
           <ul>
-            <li><p className="fs-24-16 white mb-0"><span><MdGpsFixed/></span> Goals</p> <IoIosArrowDroprightCircle className="rignt-arrow"/></li>
-            <li><p className="fs-24-16 white mb-0"><span><MdGpsFixed/></span> Popular Design</p> <IoIosArrowDroprightCircle className="rignt-arrow"/></li>
-            <li><p className="fs-24-16 white mb-0"><span><MdGpsFixed/></span> Mens</p> <IoIosArrowDroprightCircle className="rignt-arrow"/></li>
-            <li><p className="fs-24-16 white mb-0"><span><MdGpsFixed/></span> Application</p> <IoIosArrowDroprightCircle className="rignt-arrow"/></li> 
+            <li>
+              <p className="fs-24-16 white mb-0">
+                <span>
+                  <MdGpsFixed />
+                </span>{" "}
+                Goals
+              </p>{" "}
+              <IoIosArrowDroprightCircle className="rignt-arrow" />
+            </li>
+            <li>
+              <p className="fs-24-16 white mb-0">
+                <span>
+                  <MdGpsFixed />
+                </span>{" "}
+                Popular Design
+              </p>{" "}
+              <IoIosArrowDroprightCircle className="rignt-arrow" />
+            </li>
+            <li>
+              <p className="fs-24-16 white mb-0">
+                <span>
+                  <MdGpsFixed />
+                </span>{" "}
+                Mens
+              </p>{" "}
+              <IoIosArrowDroprightCircle className="rignt-arrow" />
+            </li>
+            <li>
+              <p className="fs-24-16 white mb-0">
+                <span>
+                  <MdGpsFixed />
+                </span>{" "}
+                Application
+              </p>{" "}
+              <IoIosArrowDroprightCircle className="rignt-arrow" />
+            </li>
           </ul>
+        </div>
+      </div>
+      <div className="dash-first-pi-head third-row-wrapper">
+        <div className="count-show-frame  ">
+          <div className="sub-bar-chart-header">
+            <h2 className="fs-24-16 fw-bold white mb-0">Recent Orders</h2>
+          </div>
+          <div className="bar-chart-wrapper ">
+            <table width={"100%"}>
+              <thead>
+                <tr className="table-head-row">
+                  <th>Customer </th>
+                  <th>Order No </th>
+                  <th>Amount </th>
+                  <th>Status </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[1,1,1,1,1,1,1,1].map((ele, i) => {
+                  return (
+                    <tr key={i} className="table-body-row">
+                      <td>
+                        <div className="customer-main-frame">
+                          <span>
+                            <Image src={userImage} className="" alt="alt" />{" "}
+                          </span>
+                          <p className="fs-18-14 white mb-0">White Happle</p>
+                        </div>
+                      </td>
+                      <td>8967855453 </td>
+                      <td>$2345 </td>
+                      <td>
+                        <div className="deliver-order">Delevers</div>{" "}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div className="pie-chart-frames ">
+          <h2 className="fs-24-16 fw-bold white mb-0">Customer Feedback</h2>
         </div>
       </div>
     </div>
