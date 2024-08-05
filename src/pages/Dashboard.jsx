@@ -4,12 +4,13 @@ import PaiChart from "../components/chart/PaiChart";
 import { Dropdown } from "react-bootstrap";
 import BarChart from "../components/chart/BarChart";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { MdGpsFixed } from "react-icons/md";
 export default function Dashboard() {
   return (
     <div className="main-light-dashboard">
       <h2 className="fs-28-18 fw-bold white">Dashboard</h2>
       <div className="dash-first-pi-head">
-        <div className="count-show-frame">
+        <div className="count-show-frame justify-content-between">
           {[1, 2, 3, 4].map((ele, i) => {
             return (
               <div key={i} className="count-card">
@@ -53,13 +54,16 @@ export default function Dashboard() {
               </Dropdown.Menu>
             </Dropdown>
           </div>
-          <div className="bar-chart-wrapper">
+          <div className="bar-chart-wrapper ">
             <BarChart/>
           </div>
         </div>
         <div className="pie-chart-frames ">
           <ul>
-            <li><p className="fs-18-14 white"><span></span> Goals</p> <IoIosArrowDroprightCircle /></li>
+            <li><p className="fs-24-16 white mb-0"><span><MdGpsFixed/></span> Goals</p> <IoIosArrowDroprightCircle className="rignt-arrow"/></li>
+            <li><p className="fs-24-16 white mb-0"><span><MdGpsFixed/></span> Popular Design</p> <IoIosArrowDroprightCircle className="rignt-arrow"/></li>
+            <li><p className="fs-24-16 white mb-0"><span><MdGpsFixed/></span> Mens</p> <IoIosArrowDroprightCircle className="rignt-arrow"/></li>
+            <li><p className="fs-24-16 white mb-0"><span><MdGpsFixed/></span> Application</p> <IoIosArrowDroprightCircle className="rignt-arrow"/></li> 
           </ul>
         </div>
       </div>

@@ -31,7 +31,7 @@ const BarChart = ({ info }) => {
             "#7294ff",
           ],
           // borderRadius: 50,
-          barThickness: 24,
+        //   barThickness: 24,
           borderRadius: 25,
           borderSkipped:false,
         },
