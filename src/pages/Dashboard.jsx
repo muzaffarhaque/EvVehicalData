@@ -1,6 +1,9 @@
 import React from "react";
 import { FaShoppingBasket } from "react-icons/fa";
 import PaiChart from "../components/chart/PaiChart";
+import { Dropdown } from "react-bootstrap";
+import BarChart from "../components/chart/BarChart";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 export default function Dashboard() {
   return (
     <div className="main-light-dashboard">
@@ -29,8 +32,35 @@ export default function Dashboard() {
             <p className="fs-14-12 fw-bold mb-1 text-start green-active">3%</p>
           </div>
           <div className="pie-chart-box">
-            <PaiChart/>
+            <PaiChart />
           </div>
+        </div>
+      </div>
+      <div className="dash-first-pi-head second-row-wrapper">
+        <div className="count-show-frame  ">
+          <div className="sub-bar-chart-header">
+            <h2 className="fs-24-16 fw-bold white">Activity</h2>
+
+            <Dropdown className="custom-dropdown">
+              <Dropdown.Toggle  id="dropdown-basic">
+                Weekly
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+          <div className="bar-chart-wrapper">
+            <BarChart/>
+          </div>
+        </div>
+        <div className="pie-chart-frames ">
+          <ul>
+            <li><p className="fs-18-14 white"><span></span> Goals</p> <IoIosArrowDroprightCircle /></li>
+          </ul>
         </div>
       </div>
     </div>
