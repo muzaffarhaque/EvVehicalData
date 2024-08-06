@@ -5,6 +5,8 @@ import { Dropdown, Image } from "react-bootstrap";
 import BarChart from "../components/chart/BarChart";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { MdGpsFixed } from "react-icons/md";
+import profile from "../assets/images/user3.avif";
+import { FaStar } from "react-icons/fa";
 
 import userImage from "../assets/images/user3.avif";
 export default function Dashboard() {
@@ -43,10 +45,8 @@ export default function Dashboard() {
         <div className="count-show-frame  ">
           <div className="sub-bar-chart-header">
             <h2 className="fs-24-16 fw-bold white">Activity</h2>
-
             <Dropdown className="custom-dropdown">
               <Dropdown.Toggle id="dropdown-basic">Weekly</Dropdown.Toggle>
-
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -115,7 +115,7 @@ export default function Dashboard() {
                 </tr>
               </thead>
               <tbody>
-                {[1,1,1,1,1,1,1,1].map((ele, i) => {
+                {[1, 1, 2, 1, 1, 2, 1, 1].map((ele, i) => {
                   return (
                     <tr key={i} className="table-body-row">
                       <td>
@@ -129,7 +129,13 @@ export default function Dashboard() {
                       <td>8967855453 </td>
                       <td>$2345 </td>
                       <td>
-                        <div className="deliver-order">Delevers</div>{" "}
+                        <div
+                          className={`deliver-order ${
+                            ele == 2 ? "cancled-btn" : ""
+                          }`}
+                        >
+                          {ele !== 2 ? "Delivered" : "canceled"}
+                        </div>{" "}
                       </td>
                     </tr>
                   );
@@ -140,6 +146,31 @@ export default function Dashboard() {
         </div>
         <div className="pie-chart-frames ">
           <h2 className="fs-24-16 fw-bold white mb-0">Customer Feedback</h2>
+          {[1, 2, 3, 4].map((ele, i) => {
+            return (
+              <div key={i} className="customer-review-box">
+                <div className="review-header">
+                  <span>
+                    <Image src={profile} alt="profile" />
+                  </span>
+                  <p className="mb-0 fs-18-14 white">Muzaffar Haque</p>
+                </div>
+                <div className="start-icons">
+                  <FaStar className="start" />
+                  <FaStar className="start" />
+                  <FaStar className="start" />
+                  <FaStar className="start" />
+                  <FaStar className="start" />
+                </div>
+                <p className="text-review fs-14-12 mb-1">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                  vero iste itaque impedit modi aperiam qui, pariatur quasi
+                  tenetur tempora consectetur ullam quas ab natus enim
+                  similique, excepturi rem nisi!
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
