@@ -393,8 +393,9 @@
             gap: 12px;
 
             .count-card {
+                width: 47%;
                 max-width: 136px;
-                min-width: 130px;
+                min-width: 116px;
             }
         }
 
@@ -420,4 +421,15 @@
         }
     }
 
+}
+
+@media (max-width:330px) {
+    .dash-first-pi-head {
+        .count-show-frame {
+            .count-card {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
 }
