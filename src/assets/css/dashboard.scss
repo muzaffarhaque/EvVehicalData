@@ -239,7 +239,7 @@
     align-items: stretch !important;
 
     .bar-chart-wrapper {
-        overflow-x: scroll;
+        overflow-x: auto;
 
         table {
             min-width: 600px;
