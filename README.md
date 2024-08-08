@@ -6,3 +6,4 @@ skils : html css,SCSS, js, Boostrap, React js, vite,  Chart js, Responsive desig
 
 
 ![image](https://github.com/user-attachments/assets/99d990e1-fcf5-41e8-814d-4fdd0208f923)
+![image](https://github.com/user-attachments/assets/1296b027-0ca9-43e9-aa41-5ffb542b88b2)
