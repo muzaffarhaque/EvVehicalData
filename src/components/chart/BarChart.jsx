@@ -6,13 +6,13 @@ const BarChart = ({ info }) => {
 
   useEffect(() => {
     const data = {
-      labels: ["January", "February", "March", "April", "May", "June",'july','Aug','Sep','Oct',"Dec"],
+      // labels: ["January", "February", "March", "April", "May", "June",'july','Aug','Sep','Oct',"Dec"],
+      labels: info.labels,
    
-      // labels: ["AP_VIJ-Sri Sai Direct", "AP_VIJ-Sri Sai Direct", "AP_VIJ-Sri Sai Direct", "AP_VIJ-Sri Sai Direct", "AP_VIJ-Sri Sai Direct", "AP_VIJ-Sri Sai Direct"],
       datasets: [
         {
-        //   data: info.dataBar,
-          data: [800, 2500, 1400, 1500, 1200, 1200,300,500,1000,900,1200],
+          data: info.dataBar,
+          // data: [800, 2500, 1400, 1500, 1200, 1200,300,500,1000,900,1200],
           // data: info.data,
           backgroundColor: [
             "#7294ff",

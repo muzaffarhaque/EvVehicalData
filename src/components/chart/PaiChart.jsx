@@ -2,8 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 
 const PaiChart = (props) => {
+  const avgCount = props?.value || 78;
   const chartRef = useRef(null);
-
+  // alert(avgCount);
   useEffect(() => {
   
     const data = {
@@ -11,7 +12,7 @@ const PaiChart = (props) => {
       datasets: [
    
         {
-          data: [30, 70,],
+          data: [ (100 - avgCount), avgCount,],
           backgroundColor: ["#99CBE8", "#28AFFD"],
           hoverBackgroundColor: ["#99CBE8", "#28AFFD"],
           borderColor: "white", 
@@ -69,8 +70,8 @@ const PaiChart = (props) => {
             const { ctx, width, height } = chart;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            const text ="70%";
-            const text2 ="Gole";
+            const text =avgCount || "70%";
+            const text2 ="Range";
        
             const xcoor = chart.getDatasetMeta(0).data[0].x;
             const ycoor = chart.getDatasetMeta(0).data[0].y;
