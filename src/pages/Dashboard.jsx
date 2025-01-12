@@ -11,8 +11,6 @@ import profile from "../assets/images/user3.avif";
 import {FaStar} from "react-icons/fa";
 import evdata from "../EvJsonData.json";
 
-import userImage from "../assets/images/user3.avif";
-import {icon} from "@fortawesome/fontawesome";
 export default function Dashboard() {
     const [selectedRange,setSelectedRange] = useState("Monthly");
     const [chartInfo,setChartInfo] = useState({labels: [], dataBar: []});
